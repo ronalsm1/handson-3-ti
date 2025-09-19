@@ -19,11 +19,13 @@ public class UnaryOperatorsPractice {
 
         // - Gunakan post-increment (counter++) dan print hasilnya
         System.out.println("counter++ = " + counter++);
+        System.out.println("counter = " + counter);
         // - Reset counter ke 5, lalu gunakan pre-decrement (--counter) dan print hasilnya
         counter = 5;
         System.out.println("--counter = " + --counter);
         // - Gunakan post-decrement (counter--) dan print hasilnya
         System.out.println("counter-- " + counter--);
+        System.out.println("counter = " + counter);
 
         // ===== PERILAKU PRE vs POST INCREMENT =====
         System.out.println("\\n=== PERILAKU PRE vs POST INCREMENT ===");
@@ -46,19 +48,22 @@ public class UnaryOperatorsPractice {
         System.out.println("b++ = " + result2);
 
         // - Jelaskan dalam komentar apa yang Anda amati tentang perbedaannya
-        //Saat saya print 'a' dan 'result', yang ditampilkan adalah nilai yg sudah ditambah 1 jadi 11.
-        //Saat saya print 'b', yang ditampilkan adalah nilai yg sudah ditambah 1 juga jadi 11, sedangkan
-        //saat print 'result2', yang ditampilkan adalah nilai yg belum ditambah yaitu 10.
 
         // ===== PERILAKU PRE vs POST DECREMENT =====
         System.out.println("\\n=== PERILAKU PRE vs POST DECREMENT ===");
 
         // Latihan 3: Pahami perbedaan antara pre dan post decrement
         // - Buat dua variabel: x = 8, y = 8
+        int x = 8;
+        int y = 8;
 
         // - Print nilai dari --x (pre-decrement) dan kemudian print x lagi
+        System.out.println("--x = " + --x);
+        System.out.println("x = " + x);
 
         // - Print nilai dari y-- (post-decrement) dan kemudian print y lagi
+        System.out.println("y-- = " + y--);
+        System.out.println("y = " + y);
 
         // - Tulis komentar yang menjelaskan kapan decrement terjadi pada setiap kasus
 
@@ -67,12 +72,18 @@ public class UnaryOperatorsPractice {
 
         // Latihan 4: Berlatih operator unary plus dan minus
         // - Buat variabel integer positif 'positive' dengan nilai 42
+        int positive = 42;
 
         // - Buat variabel integer negatif 'negative' menggunakan operator unary minus pada positive
+        int negative = -positive;
 
         // - Buat variabel 'backToPositive' menggunakan unary minus pada negative (membuatnya positif lagi)
+        int backToPositive = -negative;
 
         // - Print ketiga variabel tersebut
+        System.out.println("Positif: " + positive);
+        System.out.println("Negatif: " + negative);
+        System.out.println("Kembali ke Positif: " + backToPositive);
 
         // - Demonstrasikan bahwa unary plus tidak mengubah nilai (buat variabel dengan +positive)
 
@@ -81,61 +92,99 @@ public class UnaryOperatorsPractice {
 
         // Latihan 5: Berlatih operator boolean NOT
         // - Buat variabel boolean 'isReady' dengan nilai true
+        boolean isReady = true;
 
         // - Buat boolean lain 'isNotReady' menggunakan operator NOT (!) pada isReady
+        boolean isNotReady = !isReady;
 
         // - Print kedua variabel
+        System.out.println("isReady: " + isReady);
+        System.out.println("isNotReady: " + isNotReady);
 
         // - Buat ekspresi boolean yang mengecek apakah suatu angka TIDAK sama dengan nol
         // Gunakan angka apapun dan print hasilnya
+        boolean angkaPun = (9 != 0);
+        System.out.println("Angka 9 tidak sama dengan nol? " + angkaPun);
 
         // - Rangkai beberapa operator NOT: buat variabel dengan !!isReady dan amati hasilnya
+        boolean duaNot = !!isReady;
+        System.out.println("Hasil dari !!isReady: " + duaNot);
 
         // ===== APLIKASI PRAKTIS =====
         System.out.println("\\n=== APLIKASI PRAKTIS ===");
 
         // Latihan 6: Gunakan unary operators dalam skenario praktis
         // - Buat variabel 'attempts' dimulai dari 0
+        int attempts = 0;
 
         // - Simulasikan tiga percobaan login yang gagal dengan increment 'attempts' setiap kali
         // Print "Attempt: " + attempts setelah setiap increment
+        System.out.println("Attempt: " + ++attempts);
+        System.out.println("Attempt: " + ++attempts);
+        System.out.println("Attempt: " + ++attempts);
 
         // - Buat variabel 'lives' dimulai dari 3
+        int lives = 3;
 
         // - Simulasikan kehilangan nyawa dalam game dengan decrement 'lives'
         // Print "Lives remaining: " + lives setelah setiap decrement
+        System.out.println("Lives remaining: " + --lives);
+        System.out.println("Lives remaining: " + --lives);
+        System.out.println("Lives remaining: " + --lives);
 
         // Latihan 7: Loop counters dengan increment/decrement
         // - Gunakan while loop yang berjalan 5 kali menggunakan post-increment
         // Buat variabel 'i' dimulai dari 1, kondisi: i <= 5, increment: i++
         // Print loop counter setiap iterasi
+        int i = 1;
+        while (i <= 5){
+            System.out.println("loop counter: " + i++);
+        }
 
         // - Gunakan while loop yang menghitung mundur dari 3 ke 1 menggunakan post-decrement
         // Buat variabel 'countdown' dimulai dari 3, kondisi: countdown > 0, decrement: countdown--
         // Print "Countdown: " + countdown setiap iterasi
+        int countdown = 3;
+        while (countdown > 0){
+            System.out.println("Countdown: " + countdown--);
+        }
 
         // ===== SKENARIO MENANTANG =====
         System.out.println("\\n=== SKENARIO MENANTANG ===");
 
         // Latihan 8: Skenario increment/decrement kompleks
         // - Buat variabel 'value' dengan nilai awal 5
+        int value = 5;
 
         // - Hitung dan simpan hasil dari: value++ + ++value
         // Print kedua hasil dan nilai akhir dari 'value'
+        int hasil1 = value++ + ++value;
+        System.out.println("Hasil dari value++ + ++value = " + hasil1);
+        System.out.println("Nilai akhir dari value: " + value);
 
         // - Reset value ke 5, lalu hitung: --value + value--
         // Print kedua hasil dan nilai akhir dari 'value'
+        value = 5;
+        int hasil2 = --value + value--;
+        System.out.println("Hasil dari --value + value-- = " + hasil2);
+        System.out.println("Nilai akhir dari value: " + value);
 
         // - Prediksi hasilnya sebelum menjalankan dan tambahkan komentar dengan prediksi Anda
 
         // Latihan 9: Increment/Decrement dengan pemanggilan method
         // - Buat variabel 'score' dengan nilai 10
+        int score = 10;
 
         // - Print hasil dari Math.max(++score, 12)
         // Kemudian print nilai score saat ini
+        System.out.println("Hasil dari Math.max(++score, 12): " + Math.max(++score, 12));
+        System.out.println("Nilai score saat ini: " + score);
 
         // - Reset score ke 10, lalu print hasil dari Math.max(score++, 12)
         // Kemudian print nilai score saat ini
+        score = 10;
+        System.out.println("Hasil dari Math.max(score++, 12): " + Math.max(score++, 12));
+        System.out.println("Nilai score saat ini: " + score);
 
         // - Komentari perbedaan perilaku yang Anda amati
     }
