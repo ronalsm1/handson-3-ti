@@ -48,6 +48,12 @@ public class UnaryOperatorsPractice {
         System.out.println("b++ = " + result2);
 
         // - Jelaskan dalam komentar apa yang Anda amati tentang perbedaannya
+        /*
+        pre-increment (++a) membuat nilai 'a' atau 10 ditambah dulu menjadi 11, kemudian nilai 11 digunakan
+        dalam tugas. Maka, 'a' dan 'result1' sama-sama bernilai 11.
+        post-increment (b++) membuat nilai 'b' atau 10 digunakan dulu dalam tugas, kemudian nilai 10 ditambah
+        menjadi 11. Maka, 'result2' bernilai 10 (nilai awal) dan 'b' menjadi bernilai 11.
+         */
 
         // ===== PERILAKU PRE vs POST DECREMENT =====
         System.out.println("\\n=== PERILAKU PRE vs POST DECREMENT ===");
@@ -66,6 +72,10 @@ public class UnaryOperatorsPractice {
         System.out.println("y = " + y);
 
         // - Tulis komentar yang menjelaskan kapan decrement terjadi pada setiap kasus
+        /*
+        pre-decrement (--x): nilai 'x' atau 8 dikurangi dulu menjadi 7, kemudian nilai 7 digunakan dalam tugas.
+        post-decrement (x--): nilai 'y' atau 8 digunakan dulu dalam tugas, kemudian nilai 8 dikurangi menjadi 7.
+         */
 
         // ===== UNARY PLUS DAN MINUS =====
         System.out.println("\\n=== UNARY PLUS DAN MINUS ===");
@@ -86,6 +96,8 @@ public class UnaryOperatorsPractice {
         System.out.println("Kembali ke Positif: " + backToPositive);
 
         // - Demonstrasikan bahwa unary plus tidak mengubah nilai (buat variabel dengan +positive)
+        int tidakUbah = +positive;
+        System.out.println("Unary plus tidak ubah nilai: " + tidakUbah);
 
         // ===== OPERATOR BOOLEAN NOT =====
         System.out.println("\\n=== OPERATOR BOOLEAN NOT ===");
@@ -170,6 +182,13 @@ public class UnaryOperatorsPractice {
         System.out.println("Nilai akhir dari value: " + value);
 
         // - Prediksi hasilnya sebelum menjalankan dan tambahkan komentar dengan prediksi Anda
+        /*
+        value++ menggunakan nilai 5 dulu, kemudian ditambah menjadi 6. ++value menambah nilai 6 menjadi 7, kemudian
+        nilai 7 digunakan. Hasilnya 5 + 7 = 12 dan nilai akhir value adalah 7.
+
+        --value mengurangi nilai 5 menjadi 4, kemudian nilai 4 digunakan. value-- menggunakan nilai 4 dulu, kemudian
+        dikurangi menjadi 3. Hasilnya 4 + 4 = 8 dan nilai akhir value adalah 3.
+         */
 
         // Latihan 9: Increment/Decrement dengan pemanggilan method
         // - Buat variabel 'score' dengan nilai 10
@@ -187,5 +206,12 @@ public class UnaryOperatorsPractice {
         System.out.println("Nilai score saat ini: " + score);
 
         // - Komentari perbedaan perilaku yang Anda amati
+        /*
+        Math.max(++score, 12) -> nilai 'score' ditambah dulu menjadi 11, kemudian digunakan dalam method, menjadi
+        Math.max(11, 12) yang mengembalikan nilai tertinggi yaitu 12. Nilai 'score' nya jadi 11.
+
+        Math.max(score++, 12) -> nilai 'score' digunakan dulu dalam method, menjadi Math.max(10, 12) yang mengembalikan
+        nilai 12, kemudian nilai 'score' ditambah menjadi 11.
+         */
     }
 }
